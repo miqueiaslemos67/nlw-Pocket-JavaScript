@@ -25,23 +25,24 @@ Como um lego, você irá utilizar peças para criar algoritmos, ou seja, para re
 
 ## Escopo e variáveis
 
-- Variáveis globais e locais
+- [x] Variáveis globais e locais
         - Obs: Variáveis é uma 'caixinha', onde eu irei guardar uma informação para usar mas tarde.
         - A informação da variável pode ser qual tipo de dado Ex: strings, Numbers, boolens, function... 
-- Constantes
+
+- [x] Constantes
 
 
 
 ## Tipos de dados:
 
-- Strings (textos): Podem ser escritos com aspas duplas (" "), aspas simples ('') e crase (``).
-- Number: são numeros: 1, 2, 2.5....
-- Functions(funções)
+- [x] Strings (textos): Podem ser escritos com aspas duplas (" "), aspas simples ('') e crase (``).
+- [x] Number: são numeros: 1, 2, 2.5....
+- [x] Boolean: só pode ser true ou false / verdadeiro ou falso.
 
 
 ## Operadores
 
-- Operadores de atribuição de valor Ex: =
+- [x] Operadores de atribuição de valor Ex: =
     - Esse sinal de igual na programação tem a função de atribuir algo.
             - EX: let = "Hello, world!!" Aqui nesse exempplo o sinal de igual (=) está recebendo a mensagem "Hello, world!!"
 
@@ -54,3 +55,30 @@ Como um lego, você irá utilizar peças para criar algoritmos, ou seja, para re
 console.log(mensagem)
 
 OBS: Nesse exemplo a mensagem no console.log, irá aprecer "Olá, Miquéias", por está fora das {} ele se torna global. Já a variável const que está entre {} está em outro escopo(caixa), ela se torna local!
+
+< # ---------------------------------------------------------------------------------------------------------------------------------------------------------------- # >
+
+- [x] Operadores de contatenação + : Junção de duas ou mais strings
+    Ex: let metas = ["Miquéias", "36 anos."]
+    console.log(metas[0] + ", " + metas[1])
+    Res: Miquéias, 36 anos.
+
+## Estrutura de dados:
+
+
+## Arrays:
+
+- Uma lista que contém qualquer tipo de dado
+
+## Objetos:
+
+- [x] Atributos e métodos
+- [x] Criação e manipulação de objetos
+- [x] Acesso a propriedades de objetos // Sempre que eu usar o ponto(.), estarei acessando uma algo dertro/propriedade dentro
+
+
+## Functions
+
+- [x] criar, passar argumento
+- [x] executar
+- [x] arrow function / named function
