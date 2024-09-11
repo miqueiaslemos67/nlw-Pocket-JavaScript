@@ -82,3 +82,8 @@ OBS: Nesse exemplo a mensagem no console.log, irá aprecer "Olá, Miquéias", po
 - [x] criar, passar argumento
 - [x] executar
 - [x] arrow function / named function
+
+
+## Estrutura de reptição
+
+- [x] while
