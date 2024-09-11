@@ -86,4 +86,9 @@ OBS: Nesse exemplo a mensagem no console.log, irá aprecer "Olá, Miquéias", po
 
 ## Estrutura de reptição
 
-- [x] while
+- [x] while 
+        OBS: Temos que ter cuidado por no while sempre sera veradeiro, sendo necessário usar o (return), para parar o looping.
+
+## Condicionais
+
+- [x] switch

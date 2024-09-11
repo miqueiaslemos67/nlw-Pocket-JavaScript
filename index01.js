@@ -8,15 +8,12 @@
 //     checked: true,
 // }
 // meta.value = "não é mais ler um livro"
-// meta.log(meta.value)     
+// meta.log(meta.value)
 // console.log(metas[0] + " ," + metas[1])
 
 // function // arrow function Ex: abaixo
 
 //let criarMeta =  () => {}
-
-
-
 
 // let metas = ["Miquéias", "36 anos."]
 // console.log(metas[0] + ", " + metas[1])
@@ -24,9 +21,9 @@
 // let meta = {
 //     value: 'Ler um livro por mês',
 //     checked: true,
-// }   
+// }
 
-// let metas = [ 
+// let metas = [
 //     meta,
 //     {
 //         value: "Academia 5 vezes por semana.",
@@ -37,11 +34,31 @@
 
 // ----------------------------------------------------------//
 
+// const start = () => {
+//     let count = 1
+//     while(count <= 10){
+//         console.log(count)
+//         count++
+//     }
+// }
+// start()
+
+// --------------------------------------------------------//
+
 const start = () => {
-    let count = 1
-    while(count <= 10){
-        console.log(count)
-        count++
+  while (true) {
+    let opcao = "sair";
+    switch (opcao) {
+      case "cadastrar":
+        console.log("Vamos cadastrar");
+        break;
+      case "listar":
+        console.log("Vamos listar");
+        break;
+      case "sair":
+        return;
     }
-}
-start()
+  }
+};
+
+start();
