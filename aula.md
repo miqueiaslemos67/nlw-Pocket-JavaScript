@@ -88,7 +88,33 @@ OBS: Nesse exemplo a mensagem no console.log, irá aprecer "Olá, Miquéias", po
 
 - [x] while 
         OBS: Temos que ter cuidado por no while sempre sera veradeiro, sendo necessário usar o (return), para parar o looping.
+                    const start = () => {
+                        let count = 1;
+                        while (count <= 10) {
+                        console.log(count);
+                        count++;
+                        }
+                    };
+                    start();
+
 
 ## Condicionais
 
 - [x] switch
+                const start = () => {
+                    while (true) {
+                        let opcao = "sair";
+                        switch (opcao) {
+                        case "cadastrar":
+                            console.log("Vamos cadastrar");
+                            break;
+                        case "listar":
+                            console.log("Vamos listar");
+                            break;
+                        case "sair":
+                            return;
+                        }
+                    }
+                    };
+
+                start();
