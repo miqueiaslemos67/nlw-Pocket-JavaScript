@@ -5,17 +5,15 @@ Como um lego, você irá utilizar peças para criar algoritmos, ou seja, para re
 
 > **Algoritmos**: Sequência de passos lógicos e finita para resolução de um problema.
 
-
 ## Peças de uma linguagem
 
-[x] - Comentários 
+[x] - Comentários
 [] - Declarações de variáveis (const, let)
 [] - Operadores (atribuição, concatenação, matemáticos, lógicos)
 [] - Tipos de dados (string, Number, boolean)
 [] - Estrutura de dados (functions, object, array)
 [] - Controle de fluxo (if/else)
 [] - Estrutura de repetição (for, while)
-
 
 ## Fases da resolução de um problema
 
@@ -25,13 +23,9 @@ Como um lego, você irá utilizar peças para criar algoritmos, ou seja, para re
 
 ## Escopo e variáveis
 
-- [x] Variáveis globais e locais
-        - Obs: Variáveis é uma 'caixinha', onde eu irei guardar uma informação para usar mas tarde.
-        - A informação da variável pode ser qual tipo de dado Ex: strings, Numbers, boolens, function... 
+- [x] Variáveis globais e locais - Obs: Variáveis é uma 'caixinha', onde eu irei guardar uma informação para usar mas tarde. - A informação da variável pode ser qual tipo de dado Ex: strings, Numbers, boolens, function...
 
 - [x] Constantes
-
-
 
 ## Tipos de dados:
 
@@ -39,18 +33,15 @@ Como um lego, você irá utilizar peças para criar algoritmos, ou seja, para re
 - [x] Number: são numeros: 1, 2, 2.5....
 - [x] Boolean: só pode ser true ou false / verdadeiro ou falso.
 
-
 ## Operadores
 
 - [x] Operadores de atribuição de valor Ex: =
-    - Esse sinal de igual na programação tem a função de atribuir algo.
-            - EX: let = "Hello, world!!" Aqui nesse exempplo o sinal de igual (=) está recebendo a mensagem "Hello, world!!"
-
+  - Esse sinal de igual na programação tem a função de atribuir algo. - EX: let = "Hello, world!!" Aqui nesse exempplo o sinal de igual (=) está recebendo a mensagem "Hello, world!!"
 
 -> const mensagem = "Olá, Miquéias!"
 
 {
-    const mensagem = "Olá, Lemos!!
+const mensagem = "Olá, Lemos!!
 }
 console.log(mensagem)
 
@@ -59,12 +50,11 @@ OBS: Nesse exemplo a mensagem no console.log, irá aprecer "Olá, Miquéias", po
 < # ---------------------------------------------------------------------------------------------------------------------------------------------------------------- # >
 
 - [x] Operadores de contatenação + : Junção de duas ou mais strings
-    Ex: let metas = ["Miquéias", "36 anos."]
-    console.log(metas[0] + ", " + metas[1])
-    Res: Miquéias, 36 anos.
+      Ex: let metas = ["Miquéias", "36 anos."]
+      console.log(metas[0] + ", " + metas[1])
+      Res: Miquéias, 36 anos.
 
 ## Estrutura de dados:
-
 
 ## Arrays:
 
@@ -76,45 +66,93 @@ OBS: Nesse exemplo a mensagem no console.log, irá aprecer "Olá, Miquéias", po
 - [x] Criação e manipulação de objetos
 - [x] Acesso a propriedades de objetos // Sempre que eu usar o ponto(.), estarei acessando uma algo dertro/propriedade dentro
 
-
 ## Functions
 
 - [x] criar, passar argumento
 - [x] executar
 - [x] arrow function / named function
 
-
 ## Estrutura de reptição
 
-- [x] while 
-        OBS: Temos que ter cuidado por no while sempre sera veradeiro, sendo necessário usar o (return), para parar o looping.
-                    const start = () => {
-                        let count = 1;
-                        while (count <= 10) {
-                        console.log(count);
-                        count++;
-                        }
-                    };
-                    start();
-
+- [x] while
+      OBS: Temos que ter cuidado por no while sempre sera veradeiro, sendo necessário usar o (return), para parar o looping.
+      const start = () => {
+      let count = 1;
+      while (count <= 10) {
+      console.log(count);
+      count++;
+      }
+      };
+      start();
 
 ## Condicionais
 
 - [x] switch
-                const start = () => {
-                    while (true) {
-                        let opcao = "sair";
-                        switch (opcao) {
+      const start = () => {
+            while (true) {
+             let opcao = "sair";
+                     switch (opcao) {
                         case "cadastrar":
-                            console.log("Vamos cadastrar");
-                            break;
+                        console.log("Vamos cadastrar");
+                        break;
                         case "listar":
-                            console.log("Vamos listar");
-                            break;
+                        console.log("Vamos listar");
+                        break;
                         case "sair":
-                            return;
-                        }
-                    }
-                    };
+                     return;
+           }
+        }
+      };
 
-                start();
+    start();
+
+## Módulos em Node.js:
+
+    OBS: A ideia aqui é usar da biblioteca já criada com códigos, funções, importadas através
+    da instalação no terminal do (npm install inquirer).. criando caixa de perguntas/interações para
+    o usuário. no caso se importarmos o valor "select" seleção.
+
+- [x] Importação de módulos (require, CommonJS)
+- [x] Biblioteca 'inquirer' para criar prompts interativos
+
+## async || awai : Programação assíncrona e Promises
+
+Em JavaScript, o termo async refere-se a funções assíncronas, que permitem que você escreva código que
+lida com operações assíncronas de forma mais legível e direta, sem recorrer a estruturas mais complexas
+como callbacks ou a encadeamento de Promises.
+
+A palavra-chave async é usada para declarar uma função assíncrona. Quando uma função é marcada como async,
+ela automaticamente retorna uma Promise, e dentro dela, você pode usar a palavra-chave await para "esperar"
+a resolução de uma Promise antes de prosseguir para a próxima linha de código.
+
+## - 'await espera o usuário interagir com o sistema'
+Principais pontos:
+async transforma a função em uma função assíncrona que retorna uma Promise.
+await é usado dentro de funções async para pausar a execução até que a Promise seja resolvida ou rejeitada.
+Se a Promise for resolvida, o valor de retorno é atribuído à variável à qual o await foi aplicado.
+Se a Promise for rejeitada, você pode capturar o erro com um bloco try...catch.
+Isso facilita o tratamento de operações assíncronas (como chamadas a APIs) de forma mais linear e fácil de entender.
+
+Essa função "select" está esperando um objeto que tem as chaves || propriedades
+const opcao = await select({
+mensage: "Menu >",
+choices: []
+})
+
+## Definição de choices:
+
+Em JavaScript, choices normalmente se refere a uma coleção ou um array de opções
+que podem ser escolhidas pelo usuário ou manipuladas em um contexto específico,
+como um formulário ou menu de seleção. O termo pode variar conforme o contexto
+em que está sendo utilizado.
+
+let choices = ['Opção 1', 'Opção 2', 'Opção 3'];
+
+console.log(choices); // ['Opção 1', 'Opção 2', 'Opção 3']
+
+## Deinição de message:
+Resumo:
+message pode ser uma propriedade genérica dentro de um objeto, representando uma mensagem qualquer.
+Em contextos de erros, message é a descrição associada ao erro.
+Em eventos como Web Workers ou mensagens entre janelas, message transporta os dados entre contextos.
+Esses são alguns exemplos de como a propriedade message é usada em JavaScript.
