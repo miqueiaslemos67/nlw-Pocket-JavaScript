@@ -69,8 +69,7 @@ const listarMetas = async () => {
     message:
       "Use as setas para mudar de meta, o espaço para marcar ou desmarcar e o Enter para finalizar essa etapa",
     choices: [...metas],
-    instructions: false
-
+    instructions: false,
   });
 
   if (respostas.length == 0) {
@@ -79,8 +78,8 @@ const listarMetas = async () => {
   }
 
   metas.forEach((m) => {
-    m.checked = false
-  })
+    m.checked = false;
+  });
 
   respostas.forEach((respostas) => {
     const meta = metas.find((m) => {
@@ -90,8 +89,27 @@ const listarMetas = async () => {
     meta.checked = true;
   });
 
-  console.log("Meta(s) concluída(s)");
+  console.log("Meta(s) marcadas com concluída(s)");
 };
+
+const metasRealizadas = async () => {
+  const realizadas = metas.filter((meta) => {
+    return meta.checked;
+  });
+
+  if(realizadas.length == 0) {
+    console.log("Não existem metas realizadas!! :(")
+    return
+  }
+
+  await select({
+    message: "Metas Realizadas",
+    choices: [...realizadas]
+  })
+
+};
+
+
 
 const start = async () => {
   while (true) {
@@ -107,6 +125,10 @@ const start = async () => {
           value: "listar",
         },
         {
+          name: "Metas realizadas",
+          value: "realizadas",
+        },
+        {
           name: "Sair",
           value: "sair",
         },
@@ -120,6 +142,9 @@ const start = async () => {
         break;
       case "listar":
         await listarMetas();
+        break;
+      case "realizadas":
+        await metasRealizadas();
         break;
       case "sair":
         console.log("Até a próxima!!!");

@@ -56,12 +56,15 @@ OBS: Nesse exemplo a mensagem no console.log, irá aprecer "Olá, Miquéias", po
 
 - [x] Operadores de concatenação +
 - [x] Operadores de comparação: == != <= >= < >
+- [x] Spread operator: ... Ex: choices: [...realizadas]
 
 ## Estrutura de dados:
 
 ## Arrays:
 
-- Uma lista que contém qualquer tipo de dado
+- [x] Uma lista que contém qualquer tipo de dado
+- [x] Método de array: push, [find, forEach, filter]: HOF (Higher Order Functions)
+      * Método é toda função que está dentro de um objeto.
 
 ## Objetos:
 
