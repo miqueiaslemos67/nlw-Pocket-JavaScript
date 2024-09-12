@@ -1,50 +1,3 @@
-// arrays, objetos
-
-// let metas = ["Miquéias", "36 anos."]
-// console.log(metas[0] + ", " + metas[1])
-
-// let meta = {
-//     value: 'Ler um livro por mês',
-//     checked: true,
-// }
-// meta.value = "não é mais ler um livro"
-// meta.log(meta.value)
-// console.log(metas[0] + " ," + metas[1])
-
-// function // arrow function Ex: abaixo
-
-//let criarMeta =  () => {}
-
-// let metas = ["Miquéias", "36 anos."]
-// console.log(metas[0] + ", " + metas[1])
-
-// let meta = {
-//     value: 'Ler um livro por mês',
-//     checked: true,
-// }
-
-// let metas = [
-//     meta,
-//     {
-//         value: "Academia 5 vezes por semana.",
-//         checked: false,
-//     }
-// ]
-// console.log(metas[1].value)
-
-// ----------------------------------------------------------//
-
-// const start = () => {
-//   let count = 1;
-//   while (count <= 10) {
-//     console.log(count);
-//     count++;
-//   }
-// };
-// start();
-
-// --------------------------------------------------------//
-
 const { select, input, checkbox } = require("@inquirer/prompts");
 
 let meta = {
@@ -103,7 +56,7 @@ const metasRealizadas = async () => {
   }
 
   await select({
-    message: "Total de metas realizadas, " + realizadas.length,
+    message: "Total de metas realizadas: " + realizadas.length,
     choices: [...realizadas],
   });
 };
@@ -118,11 +71,34 @@ const metasAbertas = async () => {
     return;
   }
 
-  
   await select({
-    message: "Total de metas abertas, "  + abertas.length,
+    message: "Total de metas abertas: " + abertas.length,
     choices: [...abertas],
   });
+};
+
+const deletarMetas = async () => {
+  const metasDesmarcadas = metas.map((meta) => {
+    return { value: meta.value, checked: false };
+  });
+
+  const itemsADeletar = await checkbox({
+    message: "Selecione um ou mais itens para deletar!",
+    choices: [...metasDesmarcadas],
+    instructions: false,
+  });
+
+  if (itemsADeletar.length == 0) {
+    console.log("Nenhum item para deletar!");
+  }
+
+  itemsADeletar.forEach((item) => {
+    metas = metas.filter((meta) => {
+      return meta.value != item;
+    });
+  });
+
+  console.log("Meta(s) deletada(s) com sucesso!");
 };
 
 const start = async () => {
@@ -147,6 +123,10 @@ const start = async () => {
           value: "abertas",
         },
         {
+          name: "Deletar metas",
+          value: "deletar",
+        },
+        {
           name: "Sair",
           value: "sair",
         },
@@ -166,6 +146,9 @@ const start = async () => {
         break;
       case "abertas":
         await metasAbertas();
+        break;
+      case "deletar":
+        await deletarMetas();
         break;
       case "sair":
         console.log("Até a próxima!!!");
