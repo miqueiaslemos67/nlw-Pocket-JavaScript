@@ -63,7 +63,7 @@ OBS: Nesse exemplo a mensagem no console.log, irá aprecer "Olá, Miquéias", po
 ## Arrays:
 
 - [x] Uma lista que contém qualquer tipo de dado
-- [x] Método de array: push, [find, forEach, filter]: HOF (Higher Order Functions)
+- [x] Método de array: push, [find, forEach, filter, map]: HOF (Higher Order Functions)
       * Método é toda função que está dentro de um objeto.
 
 ## Objetos:
