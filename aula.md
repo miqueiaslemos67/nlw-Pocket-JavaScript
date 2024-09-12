@@ -123,6 +123,15 @@ OBS: Nesse exemplo a mensagem no console.log, irá aprecer "Olá, Miquéias", po
 
 - [x] Importação de módulos (require, CommonJS)
 - [x] Biblioteca 'inquirer' para criar prompts interativos
+- [x] Fs (file system)
+
+
+## JSON
+
+- [x] JavaScript Object Notation (.json)
+- [x] JSON.parse(): transforma de JSON para JS
+- [x] JSON.stringify(): transforma de JS para JSON
+
 
 ## async || awai : Programação assíncrona e Promises || OBS: Sempre que eu for usar uma função async("assíncrona") eu coloco na frente do uso dela  um await..
 
