@@ -49,10 +49,13 @@ OBS: Nesse exemplo a mensagem no console.log, irá aprecer "Olá, Miquéias", po
 
 < # ---------------------------------------------------------------------------------------------------------------------------------------------------------------- # >
 
-- [x] Operadores de contatenação + : Junção de duas ou mais strings
+- [x] Operadores de concatenação + : Junção de duas ou mais strings
       Ex: let metas = ["Miquéias", "36 anos."]
       console.log(metas[0] + ", " + metas[1])
       Res: Miquéias, 36 anos.
+
+- [x] Operadores de concatenação +
+- [x] Operadores de comparação: == != <= >= < >
 
 ## Estrutura de dados:
 
@@ -106,6 +109,9 @@ OBS: Nesse exemplo a mensagem no console.log, irá aprecer "Olá, Miquéias", po
 
     start();
 
+- [x] if/else
+
+
 ## Módulos em Node.js:
 
     OBS: A ideia aqui é usar da biblioteca já criada com códigos, funções, importadas através
@@ -115,7 +121,7 @@ OBS: Nesse exemplo a mensagem no console.log, irá aprecer "Olá, Miquéias", po
 - [x] Importação de módulos (require, CommonJS)
 - [x] Biblioteca 'inquirer' para criar prompts interativos
 
-## async || awai : Programação assíncrona e Promises
+## async || awai : Programação assíncrona e Promises || OBS: Sempre que eu for usar uma função async("assíncrona") eu coloco na frente do uso dela  um await..
 
 Em JavaScript, o termo async refere-se a funções assíncronas, que permitem que você escreva código que
 lida com operações assíncronas de forma mais legível e direta, sem recorrer a estruturas mais complexas
